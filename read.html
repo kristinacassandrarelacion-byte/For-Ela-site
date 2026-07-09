@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Your Letter</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+min-height:100vh;
+
+padding:30px;
+
+background:radial-gradient(circle at top,#5d2a86 0%,#1a0b2e 35%,#050505 100%);
+
+font-family:Poppins,sans-serif;
+
+color:white;
+
+}
+
+.paper{
+
+max-width:800px;
+
+width:95%;
+
+background:rgba(18,18,25,.95);
+
+border:2px solid #8f5cff;
+
+border-radius:25px;
+
+padding:40px;
+
+box-shadow:
+0 0 25px rgba(143,92,255,.5),
+0 0 70px rgba(143,92,255,.3);
+
+}
+
+#title{
+
+font-family:"Great Vibes",cursive;
+
+font-size:60px;
+
+text-align:center;
+
+color:#d9b3ff;
+
+margin-bottom:30px;
+
+text-shadow:
+0 0 10px #8f5cff,
+0 0 30px #8f5cff;
+
+}
+
+#letter{
+
+white-space:pre-wrap;
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#eeeeee;
+
+margin-top:20px;
+
+}
+
+button{
+
+margin-top:35px;
+
+width:100%;
+
+padding:15px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:15px;
+
+background:linear-gradient(90deg,#6b2dff,#b100ff);
+
+color:white;
+
+cursor:pointer;
+
+}
+
+button:hover{
+
+opacity:.9;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="paper">
+
+<h1 id="title"></h1>
+
+<p id="letter"></p>
+
+<button onclick="window.location.href='letter.html'">
+
+⬅ Back
+
+</button>
+
+</div>
+
+<script>
+
+const data = JSON.parse(localStorage.getItem("LoveLetter"));
+
+if(data){
+
+document.getElementById("title").textContent = data.title;
+
+document.getElementById("letter").textContent = data.letter;
+
+}else{
+
+document.getElementById("title").textContent = "No Letter Found";
+
+document.getElementById("letter").textContent =
+"It looks like no letter has been created yet. Go back and create one first.";
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+
+<title>Create Letter</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="paper">
+
+<h1>Create A Love Letter 💌</h1>
+
+<p>
+Every beautiful memory begins with a few words.
+</p>
+
+<label>Recipient's Name</label>
+
+<input
+id="recipient"
+type="text"
+placeholder="Sophia">
+
+<label>Letter Title</label>
+
+<input
+id="title"
+type="text"
+placeholder="Forever Begins Here">
+
+<label>Your Letter</label>
+
+<textarea
+id="letter"
+placeholder="Write your heart out..."></textarea>
+
+<hr>
+
+<h2>🎵 Background Song</h2>
+
+<input
+type="file"
+id="music"
+accept="audio/*">
+
+<label>Start Time (Seconds)</label>
+
+<input
+type="number"
+id="start"
+value="0">
+
+<label>End Time (Seconds)</label>
+
+<input
+type="number"
+id="end"
+value="30">
+
+<button
+onclick="generateLetter()">
+
+💌 Generate Letter
+
+</button>
+
+<div id="success"></div>
+
+</div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

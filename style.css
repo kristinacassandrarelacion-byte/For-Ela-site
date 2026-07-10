@@ -1,0 +1,338 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Poppins,sans-serif;
+    background:
+        radial-gradient(circle at top,#5d2a86 0%,#1a0b2e 35%,#050505 100%);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:30px;
+    overflow:auto;
+}
+
+.paper{
+
+    width:700px;
+    max-width:95%;
+
+    background:rgba(18,18,25,.92);
+
+    border:2px solid #8f5cff;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    box-shadow:
+        0 0 20px rgba(143,92,255,.5),
+        0 0 60px rgba(143,92,255,.25);
+
+    backdrop-filter:blur(10px);
+
+}
+
+h1{
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:64px;
+
+    text-align:center;
+
+    color:#d9b3ff;
+
+    text-shadow:
+        0 0 10px #8f5cff,
+        0 0 30px #8f5cff;
+
+}
+
+h2{
+
+    color:#d9b3ff;
+
+    text-align:center;
+
+}
+
+p{
+
+    text-align:center;
+
+    color:#dddddd;
+
+    margin-bottom:25px;
+
+}
+
+label{
+
+    color:#d6b8ff;
+
+    font-weight:bold;
+
+    display:block;
+
+    margin-top:15px;
+
+    margin-bottom:8px;
+
+}
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    border:1px solid #7d47ff;
+
+    background:#111118;
+
+    color:white;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+input:focus,
+textarea:focus{
+
+    border-color:#d46cff;
+
+    box-shadow:
+    0 0 15px rgba(212,108,255,.5);
+
+}
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#aaaaaa;
+
+}
+
+textarea{
+
+    height:250px;
+
+    resize:none;
+
+}
+
+button{
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:15px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:
+    linear-gradient(90deg,#6b2dff,#b100ff);
+
+    box-shadow:
+    0 0 20px rgba(177,0,255,.6);
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px) scale(1.02);
+
+    box-shadow:
+    0 0 35px rgba(177,0,255,.9);
+
+}
+
+hr{
+
+    border:1px solid #5a35a0;
+
+    margin:30px 0;
+
+}
+
+#success{
+
+    margin-top:30px;
+
+    display:none;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+    180deg,
+    rgba(35,18,56,.95),
+    rgba(15,10,22,.95));
+
+    border:1px solid #8f5cff;
+
+    box-shadow:
+    0 0 20px rgba(143,92,255,.35),
+    inset 0 0 15px rgba(177,0,255,.12);
+
+}
+
+#success input{
+
+    margin-top:15px;
+
+    background:#111118;
+
+    border:1px solid #8f5cff;
+
+    color:white;
+
+}
+
+#success button{
+
+    margin-top:15px;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+        filter:drop-shadow(0 0 10px #8f5cff);
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+
+        filter:drop-shadow(0 0 28px #d46cff);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        filter:drop-shadow(0 0 10px #8f5cff);
+
+    }
+
+}
+
+@keyframes shimmer{
+
+    from{
+
+        background-position:0%;
+
+    }
+
+    to{
+
+        background-position:300%;
+
+    }
+
+}
+
+.progressContainer{
+
+    width:100%;
+
+    height:22px;
+
+    background:#1d102f;
+
+    border-radius:40px;
+
+    overflow:hidden;
+
+    margin-top:25px;
+
+    border:1px solid #8f5cff;
+
+}
+
+.progressBar{
+
+    width:0%;
+
+    height:100%;
+
+    border-radius:40px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #5d2aff,
+    #9d4dff,
+    #d46cff,
+    #ffffff,
+    #d46cff,
+    #9d4dff);
+
+    background-size:300% 100%;
+
+    animation:shimmer 2s linear infinite;
+
+    transition:.3s;
+
+}
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#10091b;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#8f5cff;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#b566ff;
+
+}
